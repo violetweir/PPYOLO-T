@@ -1,0 +1,28 @@
+_BASE_: [
+  '../datasets/coco_detection.yml',
+  '../runtime.yml',
+  '_base_/optimizer_swin_1x.yml',
+  '_base_/faster_rcnn_Bot_fpn.yml',
+  '_base_/faster_rcnn_bot_reader.yml',
+]
+weights: output/faster_rcnn_swin_tiny_fpn_1x_coco/model_final
+
+
+epoch: 24
+
+LearningRate:
+  base_lr: 0.000025
+  schedulers:
+  - !PiecewiseDecay
+    gamma: 0.1
+    milestones: [16, 22]
+  - !LinearWarmup
+    start_factor: 0.1
+    steps: 1000
+
+OptimizerBuilder:
+  clip_grad_by_norm: 1.0
+  optimizer:
+    type: AdamW
+    weight_decay: 0.05
+

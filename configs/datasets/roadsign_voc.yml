@@ -1,0 +1,21 @@
+metric: VOC
+map_type: integral
+num_classes: 3
+
+TrainDataset:
+  !VOCDataSet
+    dataset_dir: PaddleDetection/dataset/voc
+    anno_path: train_list.txt
+    label_list: labels.txt
+    data_fields: ['image', 'gt_bbox', 'gt_class', ]
+
+EvalDataset:
+  !VOCDataSet
+    dataset_dir: PaddleDetection/dataset/voc
+    anno_path: val_list.txt
+    label_list: labels.txt
+    data_fields: ['image', 'gt_bbox', 'gt_class', ]
+
+TestDataset:
+  !ImageFolder
+    anno_path: PaddleDetection/dataset/voc/test_list.txt

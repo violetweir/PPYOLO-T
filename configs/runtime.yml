@@ -1,0 +1,4 @@
+use_gpu: true
+log_iter: 50
+save_dir: output_test_B
+snapshot_epoch: 1

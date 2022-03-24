@@ -5,14 +5,14 @@ TrainDataset:
   !COCODataSet
     image_dir:  JPEGImages
     anno_path:  Train.json
-    dataset_dir: data/Train
+    dataset_dir: dataset/Train
     data_fields: ['image', 'gt_bbox', 'gt_class', 'is_crowd']
 
 EvalDataset:
   !COCODataSet
     image_dir: JPEGImages
     anno_path: Test.json
-    dataset_dir: data/Test
+    dataset_dir: dataset/Test
 
 
 TestDataset:

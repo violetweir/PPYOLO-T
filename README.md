@@ -5,9 +5,9 @@
 
 ### Relevant weights are still being sorted out 
 
-### After you download the relevant data, put the training set into ./data/Train and change the name of the photo folder to JPEGImages 
+### After you download the relevant data, put the training set into ./dataset/Train and change the name of the photo folder to JPEGImages 
 
-### After you download the relevant data, put the Testb set into ./data/Test and change the name of the photo folder to JPEGImages 
+### After you download the relevant data, put the Testb set into ./dataset/Test and change the name of the photo folder to JPEGImages 
 
 
 
